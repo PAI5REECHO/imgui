@@ -33,9 +33,9 @@ In the [misc/fonts/](https://github.com/ocornut/imgui/tree/master/misc/fonts) fo
 
 - All loaded fonts glyphs are rendered into a single texture atlas ahead of time. Calling either of `io.Fonts->GetTexDataAsAlpha8()`, `io.Fonts->GetTexDataAsRGBA32()` or `io.Fonts->Build()` will build the atlas.
 
-- Make sure your font ranges data are persistent (available during the calls to `GetTexDataAsAlpha8()`/`GetTexDataAsRGBA32()/`Build()`.
+- Make sure your font ranges data are persistent (available during the calls to `GetTexDataAsAlpha8()`/`GetTexDataAsRGBA32()`/`Build()`.
 
-- Use C++11 u8"my text" syntax to encode literal strings as UTF-8. e.g.:
+- Use C++11 `u8"my text"` syntax to encode literal strings as UTF-8. e.g.:
 ```cpp
 u8"hello"
 u8"こんにちは"   // this will be encoded as UTF-8
@@ -164,7 +164,7 @@ Some solutions:
 ## Using Icon Fonts
 
 Using an icon font (such as [FontAwesome](http://fontawesome.io) or [OpenFontIcons](https://github.com/traverseda/OpenFontIcons)) is an easy and practical way to use icons in your Dear ImGui application.
-A common pattern is to merge the icon font within your main font, so you can embed icons directly from your strings without having to change fonts back and forth.
+A common pattern is to merge the icon font within your main font, so you can embed icons directly in your strings without having to change fonts back and forth.
 
 To refer to the icon UTF-8 codepoints from your C++ code, you may use those headers files created by Juliette Foucaut: https://github.com/juliettef/IconFontCppHeaders.
 
